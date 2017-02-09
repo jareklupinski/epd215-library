@@ -266,7 +266,7 @@ void EPD215::initScreen() {
   if ( _spiMode ) {
     Serial.println( "Beginning SPI" );
     SPI.begin();
-    SPI.beginTransaction( SPISettings( 1000000, MSBFIRST, SPI_MODE0 ));
+    //SPI.beginTransaction( SPISettings( 1000000, MSBFIRST, SPI_MODE0 ));
   }
   else {
     Serial.println( "Beginning Software SPI" );

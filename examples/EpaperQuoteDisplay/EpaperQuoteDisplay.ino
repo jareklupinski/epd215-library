@@ -35,7 +35,7 @@ void loop() {                                                        // loop fun
 
 void placeString( String s ) {  // helper function to implement word-wrapping
   int8_t cursorX = 0;
-  for ( uint32_t i = 0; i < s.length(); i ) {
+  for ( uint32_t i = 0; i < s.length();  ) {
     uint8_t wordEndIndex = s.indexOf( ' ', i );
     int8_t maxLength = 18 - cursorX;
     String wordString = s.substring( i, wordEndIndex );

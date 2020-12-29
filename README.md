@@ -11,6 +11,26 @@ Adapted from Adafruit GFX library driver code
 BSD license, check license.txt for more information
 All text above must be included in any redistribution
 
+```
+I have just stumbled across the OSHPark shared design for ePaper interface and I have ordered the PCBs.
+After assembling the interface I could not get this library example files to work.
+After many experiments and probing I realized that the newer board with temperature sensor was designed and the two signals for RES# and BUSY (pins 14 and 15) are swapped between the two designs.
+Since the older board is referenced in OSHPark and Hackaday, please note the different pin assignments in the example files like bellow:
+
+// initialize epaper with pin numbers for cs, dc, rs, bs, d0, d1 for software SPI
+//EPD215 epaper( 17, 16, 15, 14, 13, 11 );
+// initialize epaper with pin numbers for cs, dc, rs, bs for hardware SPI
+//EPD215 epaper( 17, 16, 15, 14 );
+// for original interface board design (minus temp sensor) use these settings (pins 14 and 15 swapped):
+// initialize epaper with pin numbers for cs, dc, rs, bs, d0, d1 for software SPI
+//EPD215 epaper( 17, 16, 14, 15, 13, 11 );
+// initialize epaper with pin numbers for cs, dc, rs, bs for hardware SPI
+//EPD215 epaper( 17, 16, 14, 15 );
+
+Thank you,
+Michal Sokolowski
+```
+
 To download: click the DOWNLOADS button in the top right corner, rename the uncompressed folder EPD215. Check that the EPD215 folder contains EPD215.cpp and EPD215.h
 
 Place the EPD215 library folder in your <arduinosketchfolder>/libraries/ folder. You may need to create the libraries subfolder if its your first library. Restart the IDE.

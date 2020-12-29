@@ -9,7 +9,7 @@ These displays use SPI to communicate. For more information on the signaling pro
 
 Written by Jarek Lupinski for Soniktech LLC  
 Adapted from Adafruit GFX library driver code
-BSD license, check license.txt for more information
+unlicense, check LICENSE for more information
 All text above must be included in any redistribution
 *********************************************************************/
 #ifndef _EPD215_H_
@@ -57,6 +57,7 @@ class EPD215 : public Adafruit_GFX {
   void writeToBuffer( uint8_t *buf );
   void softwareSpi( uint8_t data );
   void drawPixel( int16_t x, int16_t y, uint16_t color );
+  void setRotation(uint8_t r);
 
  private:
   uint32_t _d0, _d1, _cs, _dc, _rs, _bs;

@@ -9,7 +9,7 @@ These displays use SPI to communicate. For more information on the signaling pro
 
 Written by Jarek Lupinski for Soniktech LLC  
 Adapted from Adafruit GFX library driver code
-BSD license, check license.txt for more information
+unlicense, check LICENSE for more information
 All text above must be included in any redistribution
 *********************************************************************/
 #include <stdlib.h>
@@ -337,3 +337,10 @@ void EPD215::_sendIndexData( uint8_t index, uint8_t *data, uint16_t len ) {
   delay(1);
   digitalWrite( _cs, HIGH );     //CS High
 }
+
+
+void EPD215::setRotation(uint8_t r){
+  if (( r >= 0 ) && (r <= 3 ))
+    _rotation = r; 
+}
+

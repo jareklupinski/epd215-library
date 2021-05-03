@@ -2,7 +2,7 @@ This is a library for the Pervasive Displays Epaper Screen E2215CS062.
 This library has been written for and fully supports the Teensy-LC and the rest of the Teensy 3.x series and uses their native SPI library.
 It can also be used with Arduino, ESP8266, and most available microcontrollers, optionally using a slower bitbanged interface.
 
-This code and further updates will be hosted at https://github.com/jarek319/EPD215
+This code and further updates will be hosted at https://github.com/jareklupinski/EPD215
 
 These displays use SPI to communicate. For more information on the signaling protocol used, please see the official datasheet for all the details: http://www.pervasivedisplays.com/LiteratureRetrieve.aspx?ID=232068
 
